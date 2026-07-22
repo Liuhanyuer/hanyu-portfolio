@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanyu Liu — Spatial Strategy × Ops Tooling × AI-Native Craft</title>
+<meta name="description" content="Business & spatial strategist who builds the tools she recommends. Brand globalization, site selection, supply-chain digitalization.">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero{ padding:54px 0 10px; }
+  .hero h1{ font-size:clamp(26px,4.2vw,40px); font-weight:680; letter-spacing:-0.02em; margin:0 0 12px; line-height:1.2; }
+  .hero h1 .accent{ color:var(--amber); }
+  .hero p{ font-size:15px; color:var(--dim); max-width:600px; line-height:1.65; margin:0; }
+  .hero p b{ color:var(--ink); }
+
+  /* ---- masonry ---- */
+  .grid{ columns:3 300px; column-gap:16px; padding:34px 0 10px; }
+  .tile{
+    break-inside:avoid; margin:0 0 16px; border-radius:14px; overflow:hidden;
+    border:1px solid var(--line); background:var(--panel); display:block;
+    text-decoration:none; color:inherit; position:relative;
+    transition:transform .28s ease, box-shadow .28s ease;
+  }
+  .tile:hover{ transform:translateY(-4px); box-shadow:0 14px 36px rgba(26,34,51,0.10); }
+  .tile img{ width:100%; }
+  .tile .cap{ padding:13px 16px 14px; }
+  .tile .cap .t{ font-size:14px; font-weight:650; margin-bottom:3px; }
+  .tile .cap .d{ font-size:12px; color:var(--dim); line-height:1.5; }
+  .tile .badge{
+    position:absolute; top:12px; left:12px; font-size:10px; font-weight:650; letter-spacing:.08em;
+    text-transform:uppercase; background:rgba(255,255,255,0.92); border:1px solid var(--line);
+    border-radius:100px; padding:4px 10px;
+  }
+  .badge.live{ color:var(--teal); } .badge.case{ color:var(--amber); } .badge.soon{ color:var(--faint); }
+
+  /* decorative tiles (until real images land) */
+  .ph{ display:flex; flex-direction:column; justify-content:flex-end; min-height:210px; padding:18px; }
+  .ph .t{ font-size:15px; font-weight:650; margin-bottom:4px; }
+  .ph .d{ font-size:12px; line-height:1.5; opacity:.75; }
+  .ph-dots{
+    min-height:250px; color:#fff;
+    background:
+      radial-gradient(circle at 18% 30%, rgba(255,203,122,.55) 0 3px, transparent 4px),
+      radial-gradient(circle at 42% 62%, rgba(255,138,122,.6) 0 3px, transparent 4px),
+      radial-gradient(circle at 70% 25%, rgba(255,255,255,.5) 0 2.5px, transparent 3.5px),
+      radial-gradient(circle at 84% 70%, rgba(255,203,122,.5) 0 3px, transparent 4px),
+      radial-gradient(circle at 30% 84%, rgba(255,255,255,.4) 0 2px, transparent 3px),
+      linear-gradient(135deg,#1a2233 0%,#2c3850 100%);
+  }
+  .ph-teal{ min-height:190px; color:#fff; background:linear-gradient(150deg,#0d9488 0%,#065f56 100%); }
+  .ph-violet{ min-height:230px; color:#fff;
+    background:
+      linear-gradient(rgba(124,92,255,0) 60%, rgba(0,0,0,.18)),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,.12) 0 1px, transparent 1px 34px),
+      linear-gradient(135deg,#7c5cff,#4b3a99); }
+  .ph-code{ min-height:180px; background:var(--code); color:var(--ink);
+    font-family:"SF Mono",Menlo,Consolas,monospace; }
+  .ph-code .d{ color:var(--dim); font-family:inherit; }
+  .ph-slot{ min-height:150px; border-style:dashed; background:transparent; color:var(--faint);
+    align-items:flex-start; justify-content:center; }
+  .tile.slot{ border-style:dashed; box-shadow:none; }
+  .tile.slot:hover{ transform:none; }
+</style>
+</head>
+<body>
+  <div class="topnav">
+    <a class="brand" href="index.html">HANYU LIU</a>
+    <nav>
+      <a href="index.html" class="active">Work</a>
+      <a href="vibe-coding.html">Vibe Coding</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="status"><span class="dot"></span>Open to projects · NYC / remote</div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero">
+      <h1>Strategy you can <span class="accent">ship</span>.</h1>
+      <p>I'm a business &amp; spatial strategist who <b>builds the tools she recommends</b> —
+         market entry and site selection backed by GIS, brand globalization backed by supply-chain
+         reality, and operations automated with AI-native craft.</p>
+    </div>
+
+    <div class="grid">
+
+      <a class="tile" href="cases/vatica-node-reminder.html">
+        <span class="badge case">Case study</span>
+        <img src="assets/vatica-thumb.jpg" alt="VATICA node reminder — threshold trigger simulation">
+        <div class="cap">
+          <div class="t">VATICA Node Reminder</div>
+          <div class="d">680 orders, 37 columns, one rule — a zero-cost alert pipeline for a garment manufacturer, rebuilt as a live simulation.</div>
+        </div>
+      </a>
+
+      <a class="tile" href="demos/vatica-threshold-field.html">
+        <span class="badge live">Live demo</span>
+        <div class="ph ph-dots">
+          <div class="t">Threshold Field</div>
+          <div class="d">Drag four real SOP parameters and watch a production schedule stay calm — or cascade.</div>
+        </div>
+      </a>
+
+      <a class="tile" href="vibe-coding.html">
+        <span class="badge live">Process</span>
+        <div class="ph ph-code">
+          <div class="t">days = (due − today).dt.days</div>
+          <div class="d">// vibe coding: how a conversation becomes<br>// a tool, an abstraction, then this site</div>
+        </div>
+      </a>
+
+      <div class="tile">
+        <span class="badge soon">Images coming</span>
+        <div class="ph ph-teal">
+          <div class="t">POCOO Green Life</div>
+          <div class="d">Founding a sustainable consumer brand 0→1 — Kickstarter-funded, 2M+ impressions. Visual case in progress.</div>
+        </div>
+      </div>
+
+      <div class="tile">
+        <span class="badge soon">Images coming</span>
+        <div class="ph ph-violet">
+          <div class="t">Spatial Strategy at Glenbrook</div>
+          <div class="d">300K+ points of census, POI &amp; mobility data → market screening for 20+ AI &amp; consumer-tech clients.</div>
+        </div>
+      </div>
+
+      <div class="tile slot">
+        <div class="ph ph-slot">
+          <div class="t">+ Next project</div>
+          <div class="d">This grid grows one real project at a time.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="sitefoot">
+    summerhanyu@gmail.com · WeChat liuhanyuer · New York City<br>
+    Built by hand through conversation — no framework, no tracker.
+  </footer>
+</body>
+</html>

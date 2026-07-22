@@ -1,0 +1,48 @@
+/* ===== Hanyu Liu — shared design tokens ===== */
+:root{
+  --bg:#fbfbfa; --panel:#ffffff; --ink:#1a2233; --dim:#6b7486; --faint:#9aa3b5;
+  --line:#e6e8ee; --amber:#d97706; --amber-soft:#fef3e2; --red:#dc2626; --teal:#0d9488;
+  --violet:#7c5cff; --code:#f4f5f7;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:inherit; }
+img{ max-width:100%; display:block; }
+
+/* ---- top nav (shared across Work / Vibe Coding / About / case pages) ---- */
+.topnav{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 34px; background:rgba(251,251,250,0.86); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topnav .brand{ font-size:13px; font-weight:700; letter-spacing:.04em; text-decoration:none; color:var(--ink); }
+.topnav .status{
+  display:flex; align-items:center; gap:7px; font-size:12px; color:var(--dim);
+}
+.topnav .status .dot{ width:7px; height:7px; border-radius:50%; background:var(--teal);
+  box-shadow:0 0 0 3px rgba(13,148,136,.15); animation:pulse 2.4s ease-in-out infinite; }
+@keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:.45; } }
+.topnav nav{ display:flex; gap:26px; }
+.topnav nav a{ font-size:13.5px; font-weight:500; text-decoration:none; color:var(--dim); position:relative; padding:4px 0; }
+.topnav nav a:hover{ color:var(--ink); }
+.topnav nav a.active{ color:var(--ink); font-weight:650; }
+.topnav nav a.active::after{
+  content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--amber); border-radius:2px;
+}
+@media (max-width:680px){
+  .topnav{ padding:14px 18px; flex-wrap:wrap; gap:10px; }
+  .topnav .status{ order:3; width:100%; }
+  .topnav nav{ gap:18px; }
+}
+
+.wrap{ max-width:1120px; margin:0 auto; padding:0 34px; }
+.wrap-narrow{ max-width:720px; margin:0 auto; padding:0 34px; }
+
+footer.sitefoot{ padding:56px 0 72px; font-size:13px; color:var(--faint); text-align:center; }
+footer.sitefoot a{ color:var(--dim); text-decoration:none; }
